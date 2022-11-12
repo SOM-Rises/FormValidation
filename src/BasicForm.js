@@ -26,6 +26,9 @@ const BasicForm = () => {
         setInputError(valid(input));
         setIsSubmit(true);
         console.log(inputError);
+        setTimeout(() =>{
+            setIsSubmit(false);
+        },3000);
     }
 
     useEffect(() =>{
@@ -67,6 +70,7 @@ const BasicForm = () => {
             {JSON.stringify(input,undefined,1)}
         </pre>)
        }
+       
         <form action="" onSubmit={submitForm}>
         <h1>LOGIN</h1>
             <div>
